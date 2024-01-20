@@ -43,3 +43,8 @@ docker compose up
 ```bash
 docker run -it --net=host -v container_script_python_mavsdk/mission.py:/home/px4/mission.py script_python_mavsdk
 ```
+
+```bash
+python3 mission.py
+```
+
