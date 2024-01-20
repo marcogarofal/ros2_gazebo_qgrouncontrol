@@ -28,6 +28,9 @@ docker build -t px4_gazebo gazebo/
 # Build the container for QGroundControl
 docker build -t qgroundcontrol qgroundcontrol/
 ```
+```bash
+cd ros2_gazebo_qgrouncontrol/
+```
 
 ```bash
 # Run the docker-compose
