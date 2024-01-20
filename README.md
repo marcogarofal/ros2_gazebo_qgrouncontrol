@@ -34,8 +34,9 @@ docker build -t qgroundcontrol qgroundcontrol/
 docker-compose up
 ```
 
-```bash
+
 # When Gazebo and QgroundControl are ready
 # Run the container interactively, using the host network and mounting the mission.py file
+```bash
 docker run -it --net=host -v container_script_python_mavsdk/mission.py:/home/px4/mission.py script_python_mavsdk
 ```
