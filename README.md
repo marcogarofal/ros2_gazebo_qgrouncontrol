@@ -5,6 +5,10 @@
 git clone git@github.com:marcogarofal/ros2_gazebo_qgrouncontrol.git
 ```
 ```bash
+cd ros2_gazebo_qgrouncontrol/
+```
+
+```bash
 # Change the group of the script.sh file to docker
 sudo chgrp docker script.sh
 ```
@@ -28,9 +32,7 @@ docker build -t px4_gazebo gazebo/
 # Build the container for QGroundControl
 docker build -t qgroundcontrol qgroundcontrol/
 ```
-```bash
-cd ros2_gazebo_qgrouncontrol/
-```
+
 
 ```bash
 # Run the docker-compose
