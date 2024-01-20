@@ -7,35 +7,30 @@ git clone git@github.com:marcogarofal/ros2_gazebo_qgrouncontrol.git
 ```bash
 cd ros2_gazebo_qgrouncontrol/
 ```
-
+##### Change the group of the script.sh file to docker
 ```bash
-# Change the group of the script.sh file to docker
 sudo chgrp docker script.sh
 ```
-
+##### Set permissions for the script.sh file
 ```bash
-# Set permissions for the script.sh file
+
 sudo chmod 775 script.sh
 ```
-
+##### Build the container for Python script with MAVSDK
 ```bash
-# Build the container for Python script with MAVSDK
 docker build -t script_python_mavsdk container_script_python_mavsdk/
 ```
-
+##### Build the container for Gazebo with PX4
 ```bash
-# Build the container for Gazebo with PX4
 docker build -t px4_gazebo gazebo/
 ```
-
+##### Build the container for QGroundControl
 ```bash
-# Build the container for QGroundControl
 docker build -t qgroundcontrol qgroundcontrol/
 ```
 
-
+##### Run the docker-compose
 ```bash
-# Run the docker-compose
 docker compose up
 ```
 
