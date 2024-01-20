@@ -1,6 +1,9 @@
 # ros2_gazebo_qgrouncontrol
 
 ```bash
+# Clone the repository
+git clone git@github.com:marcogarofal/ros2_gazebo_qgrouncontrol.git
+
 # Change the group of the script.sh file to docker
 sudo chgrp docker script.sh
 
