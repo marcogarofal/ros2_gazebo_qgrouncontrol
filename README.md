@@ -34,7 +34,7 @@ cd ros2_gazebo_qgrouncontrol/
 
 ```bash
 # Run the docker-compose
-docker-compose up
+docker compose up
 ```
 
 
