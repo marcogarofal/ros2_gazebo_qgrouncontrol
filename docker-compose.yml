@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  px4gazebo:
+    image: px4_gazebo
+    command: ["bash", "script.sh"]        
+    network_mode: "host"
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./script.sh:/home/px4/script.sh
+  
+  qground:
+    image: qgroundcontrol
+    command:
+      - /bin/bash
+      - -c
+      - |
+        ./QGroundControl.AppImage --appimage-extract
+        export DISPLAY=:0
+        LIBGL_ALWAYS_SOFTWARE=1 
+        ./squashfs-root/QGroundControl
+    network_mode: "host"
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    depends_on:
+      - px4gazebo
+
