@@ -1,7 +1,7 @@
 # ros2_gazebo_qgrouncontrol
 
-```bash
 # Clone the repository
+```bash
 git clone git@github.com:marcogarofal/ros2_gazebo_qgrouncontrol.git
 ```
 ```bash
